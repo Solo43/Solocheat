@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLO CHEAT</title>
+<style>
+  body {
+    font-family: "Segoe UI", "Noto Kufi Arabic", sans-serif;
+    background: linear-gradient(180deg, #000000 0%, #111111 50%, #1a1a1a 100%);
+    color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  /* ======= HEADER ======= */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 25px rgba(255,215,0,0.15);
+    gap: 10px;
+  }
+
+  .header img.logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
+  }
+
+  .header .name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #d4af37, #f9d976, #b8860b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .institution {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .social-icons img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    filter: brightness(0) saturate(100%) invert(73%) sepia(38%) saturate(710%) hue-rotate(8deg) brightness(101%) contrast(101%);
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.4);
+  }
+.institution {
+  font-size: 0.9rem; /* حجم كبير وواضح */
+  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    #000 0%,
+    #d4af37 25%,
+    #f9d976 50%,
+    #b8860b 75%,
+    #000 100%
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+  padding: 8px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  animation: shine 3s linear infinite; /* حركة اللمعان */
+}
+
+/* حركة اللمعان */
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+  /* ======= HERO IMAGE ======= */
+  .top-image {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+  }
+
+  .fancy-image {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(212,175,55,0.3);
+    transition: transform 0.4s, box-shadow 0.4s;
+  }
+
+  .fancy-image img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.4s;
+  }
+
+  .fancy-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(212,175,55,0.5);
+  }
+
+  .fancy-image .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: #f9d976;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  /* ======= CARDS ======= */
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(35,35,35,0.95));
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(212,175,55,0.25);
+    max-width: 280px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    animation: slideIn 1s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(212,175,55,0.2);
+  }
+
+  .card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 30px rgba(212,175,55,0.5);
+  }
+
+  .card:nth-child(1) { animation-delay: 0.3s; }
+  .card:nth-child(2) { animation-delay: 0.6s; }
+  .card:nth-child(3) { animation-delay: 0.9s; }
+
+  .card h1 {
+    font-size: 1.4rem;
+    background: linear-gradient(90deg, #d4af37, #f9d976, #b8860b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+
+  .card button {
+    margin-top: 14px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #b8860b, #d4af37, #f9d976);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(212,175,55,0.4);
+  }
+
+  .card button:hover {
+    background: linear-gradient(90deg, #f9d976, #d4af37, #b8860b);
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(255,215,0,0.5);
+  }
+
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* ======= FOOTER ======= */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0,0,0,0.9);
+    color: #f9d976;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(212,175,55,0.3);
+  }
+
+  @media (max-width: 900px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="social-icons">
+     
+      </a>
+      <a href="tiktok.com/@ssoollooooo" target="_blank">
+        <img src="https://i.postimg.cc/J0CZXVvr/Picsart-25-09-25-07-31-24-863.png" alt="TikTok">
+      </a>
+      <a href="https://t.me/XYJ_V" target="_blank" title="تواصل عبر واتساب">
+        <img src="https://i.postimg.cc/SKyStyY2/pngtree-customer-service-avatar-icon-png-image-4324229-1.png" alt="دعم العملاء">
+      </a>
+    </div>
+
+    <div style="display:flex; flex-direction:column; align-items:flex-start; margin-right:5px;">
+
+<span class="institution">SOLO CHEAT</span>
+
+    </div>
+
+    <img src="https://i.postimg.cc/HLcHSn4F/icon.png" class="logo" alt="شعار SOLO CHEAT">
+  </div>
+
+  <div class="top-image">
+    <div class="fancy-image">
+      <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/HLcHSn4F/icon.png' border='0' alt='icon'></a>
+      <div class="overlay">مرحباً بكم في متجر SOLO CHEAT</div>
+    </div>
+  </div>
+
+</script>
+<div class="content">
+  <!-- البطاقة 1 -->
+  <div class="card">
+    <h1>SOLO CHEAT MOD SKIN</h1>
+    <div class="top-image">
+      <div class="fancy-image">
+      	
+ <a href='https://postimg.cc/2bsjS1P0' target='_blank'><img src='https://i.postimg.cc/7h65X7Xr/Screenshot-20251024-124301-PUBG-MOBILE.png' border='0' alt='Screenshot-20251024-124301-PUBG-MOBILE'></a>
+        <div class="overlay">SOLO CHEAT MOD SKIN</div>
+      </div>
+    </div>
+    <p>سعر الكود 20$</p>
+    <button onclick="window.location.href='https://t.me/xzl_v'">شراء الان</button>
+  </div>
+
+  <!-- البطاقة 2 -->
+  <div class="card">
+    <h1>SOLO CHEAT LODER</h1>
+    <div class="top-image">
+      <div class="fancy-image">
+      	<a href='https://postimg.cc/5jm8jv45' target='_blank'><img src='https://i.postimg.cc/L4cDCBGW/Screenshot-20251027-102015.png' border='0' alt='Screenshot-20251027-102015'></a>
+
+        <div class="overlay">SOLO CHEAT LODER</div>
+      </div>
+    </div>
+    <p>السعر 50$</p>
+    <button onclick="window.location.href='https://t.me/xzl_v'">شراء الان</button>
+  </div>
+
+  <!-- البطاقة 3 -->
+  <div class="card">
+    <h1>SOLO FREE</h1>
+    <div class="top-image">
+      <div class="fancy-image">
+        <a href='https://postimg.cc/DShV69VH' target='_blank'><img src='https://i.postimg.cc/52Yx4Js4/Screenshot-20251026-120752-PUBG-MOBILE.png' border='0' alt='Screenshot-20251026-120752-PUBG-MOBILE'></a>
+        <div class="overlay">SOLO FREE</div>
+      </div>
+    </div>
+    <!-- توسيط الصندوق -->
+<div style="display:flex; justify-content:center; align-items:center; width:100%; margin:25px 0">
+
+  <div style="
+    background:#000;
+    color:#ffd700;
+    padding:10px;
+    border-radius:14px;
+    width:190px;
+    text-align:center;
+    font-family:sans-serif;
+    font-size:13px;
+    box-shadow:0 0 15px rgba(255,215,0,.6);
+    border:1px solid rgba(255,215,0,.4);
+  ">
+    
+    <div id="c" style="
+      margin:8px 0;
+      font-weight:bold;
+      background:rgba(0,0,0,0.35);  /* أسود شفاف */
+      border-radius:10px;
+      padding:6px;
+      min-height:20px;
+      border:1px solid rgba(255,215,0,.4);
+      box-shadow:inset 0 0 10px rgba(255,215,0,.25);
+    "></div>
+
+    <button onclick="g()" style="
+      width:100%;
+      padding:7px;
+      border:1px solid #ffd700;
+      border-radius:8px;
+      margin-top:6px;
+      font-size:13px;
+      cursor:pointer;
+      background:#ffd700;
+      color:#000;
+      font-weight:bold;
+      box-shadow:0 0 10px rgba(255,215,0,.7);
+    ">احصل على كود مجاني 🎊</button>
+
+    <button onclick="n()" style="
+      width:100%;
+      padding:7px;
+      border:1px solid #ffd700;
+      border-radius:8px;
+      margin-top:6px;
+      font-size:13px;
+      cursor:pointer;
+      background:#000;
+      color:#ffd700;
+      font-weight:bold;
+      box-shadow:0 0 10px rgba(255,215,0,.5);
+    ">نسخ</button>
+
+  </div>
+
+</div>
+
+<script>
+let k = ["SOLO4-2-3YBDt","SOLO4-2-46jV5","SOLO4-2-5BtKH","SOLO4-2-5BtKH","SOLO4-2-5Xqsk","SOLO4-2-7xUot","SOLO4-2-7xUot","SOLO4-2-80NXg","SOLO4-2-BFpMb","SOLO4-2-LnuPJ","SOLO4-2-SGvqa","SOLO4-2-VxKMs","SOLO4-2-XYsaH","SOLO4-2-dB3bF","SOLO4-2-dg2K3","SOLO4-2-dtKC7","SOLO4-2-vwPXh","SOLO4-2-xUG5Z","SOLO4-24-TKNI6","SOLO4-24-dWe5n","SOLO4-24-fzFXC","SOLO4-24-vz608"]; // أكوادك
+
+// مدة الانتظار = 3 ساعات
+const WAIT_TIME = 2 * 60 * 60 * 1000;
+
+function g(){
+  let lastTime = localStorage.getItem("last_code_time");
+  let now = Date.now();
+
+  if(lastTime){
+    let diff = now - Number(lastTime);
+
+    if(diff < WAIT_TIME){
+      let remain = WAIT_TIME - diff;
+      let h = Math.floor(remain / (1000*60*60));
+      let m = Math.floor((remain % (1000*60*60)) / (1000*60));
+
+      c.innerText = `جرب بعد ${h} ساعة و ${m} دقيقة`;
+      return;
+    }
+  }
+
+  if(!k.length){
+    c.innerText = "خلصت الأكواد";
+    return;
+  }
+
+  let i = Math.floor(Math.random() * k.length);
+  let code = k.splice(i,1);
+  c.innerText = code;
+
+  localStorage.setItem("last_code_time", now);
+}
+
+function n(){
+  if(!c.innerText) return;
+  navigator.clipboard.writeText(c.innerText);
+  alert("تم النسخ");
+}
+</script>
+    <button onclick="window.location.href='https://t.me/xzl_v'">تحميل</button>
+  </div>
+</div>
+
+  <footer>
+    &copy; 2025 SOLO CHEAT — جميع الحقوق محفوظة.
+  </footer>
+</body>
+</html>
